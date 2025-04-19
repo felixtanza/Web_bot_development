@@ -2,25 +2,101 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dr. Felix - Tech Services</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Felix Tanza Otieno - Web Developer & WhatsApp Bot Expert</title>
+    <link rel="stylesheet" href="css.css">
+    <style>
+        /* (All the internal CSS you wrote goes here) */
+        /* ... */
+    </style>
 </head>
 <body>
-    <div class="container">
-        <img src="/static/profile.png" alt="Profile" class="profile">
-        <h1>Dr. Felix Tanza Otieno</h1>
-        <p>Offering professional services in:</p>
-        <ul>
-            <li>Bot Deployment</li>
-            <li>Web Development</li>
-            <li>Forex Trading</li>
-        </ul>
-        <a href="https://wa.me/254705195336" class="btn">Contact on WhatsApp</a>
-        <a href="https://www.facebook.com/profile.php?id=61560049556797" class="btn">Facebook Profile</a>
+
+    <header>
+        <nav>
+            <div class="logo">Dr. Felix Tanza Otieno</div>
+            <ul>
+                <li><a href="#home" class="floating-button floating-home">Home</a></li>
+                <li><a href="#services" class="floating-button floating-services">Services</a></li>
+                <li><a href="#contact" class="floating-button floating-contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Dr. Felix Tanza Otieno</h1>
+                <p>Experienced Web Developer and WhatsApp Bot Deployment Specialist.</p>
+                <a href="#services" class="button">View Services</a>
+                <a href="#contact" class="button primary">Contact Me</a>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <h2>Services</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>Web Development</h3>
+                    <p>Building modern, responsive, and user-friendly websites.</p>
+                </div>
+                <div class="service-item">
+                    <h3>WhatsApp Bot Deployment</h3>
+                    <p>Developing and deploying automated WhatsApp communication solutions.</p>
+                </div>
+                <div class="service-item">
+                    <h3>API Integration</h3>
+                    <p>Connecting various services and platforms through API integration.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out for inquiries or collaborations via the following platforms:</p>
+            <p><a href="https://wa.me/254705195336?text=Hello%20Dr.%20Felix,%20I%20am%20contacting%20you%20from%20your%20website.%20My%20name%20is%20..." class="whatsapp-button" target="_blank">Contact me on WhatsApp</a></p>
+            <p><a href="https://www.facebook.com/profile.php?id=61560049556797" class="facebook-button" target="_blank">Connect on Facebook</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Dr. Felix Tanza Otieno. All rights reserved.</p>
+        <p id="current-datetime">Saturday, April 19, 2025 at 11:20 PM EAT</p>
+    </footer>
+
+    <div id="welcome-popup">
+        <h2>Karibu!</h2>
+        <p>Welcome to the online portfolio of Dr. Felix Tanza Otieno.</p>
     </div>
-    <audio autoplay loop>
-        <source src="/static/background.mp3" type="audio/mpeg">
+
+    <audio id="background-music" autoplay loop controls muted>
+        <source src="your-background-music.mp3" type="audio/mpeg">
+        <source src="your-background-music.ogg" type="audio/ogg">
         Your browser does not support the audio element.
     </audio>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const welcomePopup = document.getElementById('welcome-popup');
+            welcomePopup.style.visibility = 'visible';
+            welcomePopup.style.opacity = '1';
+
+            setTimeout(function() {
+                welcomePopup.style.opacity = '0';
+                welcomePopup.style.visibility = 'hidden';
+            }, 5000);
+        });
+
+        function updateDateTime() {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
+            const formattedDateTime = now.toLocaleDateString('en-KE', options);
+            document.getElementById('current-datetime').textContent = formattedDateTime;
+        }
+
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+    </script>
+
 </body>
-</html>
+    </html>
