@@ -1,7 +1,7 @@
 
 
 /* Body of the page */
-body {
+*{
   background-image: url('efh_20250408230534_1809985_411e2_02ad5.png'); /* Path to your image file */
   background-size: cover; /* Make sure the background covers the entire screen */
   background-position: center; /* Center the image */
@@ -9,8 +9,9 @@ body {
   color: white; /* Set text color for readability */
   font-family: Arial, sans-serif; /* Optional: Customize font */
   height: 100vh; /* Ensure the body takes up the full height of the viewport */
+}
 
-
+body {
 /* You can add other styles for text, header, footer, etc. */
 h1, p {
   text-align: center;
