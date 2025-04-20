@@ -1,3 +1,14 @@
+:root {
+  --primary-color: #2193b0;
+  --secondary-color: #28a745;
+  --background-color: #f4f4f4;
+  --text-color: #333;
+  --header-background: #333;
+  --hover-background: #555;
+  --box-shadow: rgba(0, 0, 0, 0.1);
+  --font-family: 'Roboto', sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,14 +16,14 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-family);
   line-height: 1.6;
-  background: #f4f4f4;
-  color: #333;
+  background: var(--background-color);
+  color: var(--text-color);
 }
 
 header {
-  background: #333;
+  background: var(--header-background);
   color: #fff;
   padding: 1rem 0;
 }
@@ -45,12 +56,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background: #555;
+  background: var(--hover-background);
   border-radius: 5px;
 }
 
 .hero {
-  background: linear-gradient(to right, #6dd5ed, #2193b0);
+  background: linear-gradient(to right, #6dd5ed, var(--primary-color));
   color: white;
   text-align: center;
   padding: 4rem 1rem;
@@ -76,7 +87,7 @@ nav ul li a:hover {
   background: white;
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px var(--box-shadow);
   flex: 1 1 200px;
   max-width: 220px;
   text-align: center;
@@ -97,21 +108,23 @@ nav ul li a:hover {
 
 .content h2 {
   margin-bottom: 1rem;
-  color: #2193b0;
+  color: var(--primary-color);
 }
 
 .buttons button {
   margin: 0.5rem;
   padding: 0.6rem 1.2rem;
-  background: #28a745;
+  background: var(--secondary-color);
   border: none;
   color: white;
   border-radius: 5px;
   cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .buttons button:hover {
-  background: #218838;
+  background: darken(var(--secondary-color), 10%);
+  transform: translateY(-5px); /* Move button up on hover */
 }
 
 form {
@@ -132,6 +145,7 @@ form button {
   color: white;
   border: none;
   border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
 form button:hover {
@@ -141,7 +155,7 @@ form button:hover {
 footer {
   text-align: center;
   padding: 1rem;
-  background: #333;
+  background: var(--header-background);
   color: white;
   margin-top: 2rem;
 }
@@ -174,20 +188,20 @@ footer {
     width: 100%;
     margin: 0.5rem 0;
   }
+
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
 }
 
 .menu-toggle {
   display: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
 }
 
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
   nav ul {
     display: none;
     flex-direction: column;
