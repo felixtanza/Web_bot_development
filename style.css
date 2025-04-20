@@ -1,3 +1,26 @@
+/* General reset for the page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body of the page */
+body {
+  background-image: url('efh_20250408230534_1809985_411e2_02ad5.png'); /* Path to your image file */
+  background-size: cover; /* Make sure the background covers the entire screen */
+  background-position: center; /* Center the image */
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+  color: white; /* Set text color for readability */
+  font-family: Arial, sans-serif; /* Optional: Customize font */
+  height: 100vh; /* Ensure the body takes up the full height of the viewport */
+}
+
+/* You can add other styles for text, header, footer, etc. */
+h1, p {
+  text-align: center;
+  padding-top: 20%;
+}
 body {
     font-family: sans-serif;
     margin: 0;
